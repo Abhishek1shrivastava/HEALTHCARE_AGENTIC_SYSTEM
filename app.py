@@ -831,7 +831,7 @@ Respond in the same language the patient uses (Hindi or English)."""
                 messages.extend(st.session_state.chat_history)
 
                 response = client.chat.completions.create(
-                    model="llama-3.3-70b-versatile",
+                    model="openai/gpt-oss-120b",
                     messages=messages,
                     temperature=0.5,
                     max_tokens=700

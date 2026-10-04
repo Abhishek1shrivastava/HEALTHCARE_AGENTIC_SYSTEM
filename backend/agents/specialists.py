@@ -34,7 +34,7 @@ class BaseSpecialistAgent:
 
         try:
             response = self.client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
+               model="openai/gpt-oss-120b",
                 messages=[
                     {"role": "system", "content": self.system_prompt},
                     {"role": "user", "content": user_message}

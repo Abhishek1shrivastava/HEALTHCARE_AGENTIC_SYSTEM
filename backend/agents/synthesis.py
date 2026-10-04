@@ -142,7 +142,7 @@ Please synthesize all the above information into a final comprehensive medical a
 
         try:
             response = self.client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
+               model="openai/gpt-oss-120b",
                 messages=[
                     {"role": "system", "content": SYNTHESIS_SYSTEM_PROMPT},
                     {"role": "user", "content": full_context}

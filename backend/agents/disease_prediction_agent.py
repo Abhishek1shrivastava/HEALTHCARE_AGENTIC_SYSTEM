@@ -142,7 +142,7 @@ class AgenticDiseasePredictionAgent:
 
         try:
             response = self.client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
+                model="openai/gpt-oss-120b",
                 messages=[
                     {"role": "system", "content": DISEASE_AGENT_SYSTEM_PROMPT},
                     {"role": "user", "content": user_message}
@@ -184,7 +184,7 @@ No text before or after. Start directly with { and end with }.
 Keep it simple — just top 3 diseases with basic info."""
 
             response = self.client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
+                model="openai/gpt-oss-120b",
                 messages=[
                     {"role": "system", "content": retry_prompt},
                     {"role": "user", "content": f"""Patient: {patient_input}
